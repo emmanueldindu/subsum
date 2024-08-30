@@ -322,11 +322,16 @@ const Sidebar = () => {
 
       <div className="mt-40">
         <NavLink
-          to="/logout"
-          className="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-blue-800"
+          to="/"
+          className="block flex py-2.5 px-4 items-center mt-24 rounded-xl my-auto transition duration-200 hover:bg-gray-200"
         >
-          <LogOut className="h-5 w-5 mr-2" />
-          Log Out
+          <LogOut className="h-5 w-5 mr-2" color="#6882B6" />
+         <h1 className="text-[#6882B6] text-[14px]">
+         Log Out
+          </h1> 
+          <ChevronDown color={ "#6882B6"}
+                className="h-5 w-5 ml-8  my-auto items-center"
+              />
         </NavLink>
       </div>
     </div>
