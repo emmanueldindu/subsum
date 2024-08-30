@@ -4,6 +4,9 @@ import Navbar from "../components/Navbar";
 import mtn from '../assets/mtn.png'
 import airtel from '../assets/airtel.png'
 import etis from '../assets/9mob.png'
+import bell from "../assets/bell.png";
+import profile from "../assets/profile.png";
+import { NavLink } from "react-router-dom";
 
 
 function Cash() {
@@ -37,7 +40,20 @@ function Cash() {
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col">
-        <Navbar />
+      <div className="flex w-full h-[32px] mt-3  px-12 justify-between">
+          <h1 className="text-[#2B3B5A] text-[20px] font-[500]">
+            Airtime to Cash
+          </h1>
+          <div className="flex gap-x-2 i">
+            <h1 className="text-[16px]  text-[#4169E1] font-[600] ">
+              Upgrade To Merchant
+            </h1>
+            <img src={bell} className="h-[32px] w-[32px]" />
+            <NavLink  to="/profile">
+              <img src={profile} className="h-[32px] w-[32px]" />
+            </NavLink>
+          </div>
+        </div>
         <main className="p-6 w-full bg-white min-h-screen">
           {/* Your dashboard content will go here */}
           <div className="flex mt-4 mx-auto justify-between w-[500px]">

@@ -6,8 +6,11 @@ import { ArrowRight } from 'lucide-react'
 import what from '../assets/whats.png'
 import report from '../assets/report.png'
 import chat from '../assets/chat.png'
+import bell from "../assets/bell.png";
+import profile from "../assets/profile.png";
 import phone from '../assets/call.png'
 import review from '../assets/renew.png'
+import { NavLink } from 'react-router-dom'
 
 function Help() {
   return (
@@ -17,7 +20,20 @@ function Help() {
       
       {/* Main Content */}
       <div className="flex-1 flex flex-col">
-        <Navbar />
+      <div className="flex w-full mt-3  h-[40px]  px-12 justify-between">
+          <h1 className="text-[#2B3B5A] text-[20px] font-[500]">
+            Help and Support
+          </h1>
+          <div className="flex gap-x-2 i">
+            <h1 className="text-[16px]  text-[#4169E1] font-[600] ">
+              Upgrade To Merchant
+            </h1>
+            <img src={bell} className="h-[32px] w-[32px]" />
+            <NavLink to="/profile">
+              <img src={profile} className="h-[32px] w-[32px]" />
+            </NavLink>
+          </div>
+        </div>
         <main className="p-6 white w-full min-h-screen">
           {/* Your dashboard content will go here */}
           <div className="w-[70%]  gap-y-5 grid">
